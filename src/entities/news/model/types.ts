@@ -1,26 +1,28 @@
-export interface IReactions {
+export interface Reactions {
   likes: number;
   dislikes: number;
 }
 
-export interface INewsItem {
+export interface NewsItem {
   id: number;
   title: string;
   body: string;
   tags: string[];
-  reactions: IReactions;
+  reactions: Reactions;
+  userReaction?: "like" | "dislike" | null;
 }
 
-export interface INewsSlice {
-  news: INewsItem[];
+export interface NewsSlice {
+  news: NewsItem[];
   isLoading: boolean;
   error: string | null;
   hasMore: boolean;
-  skip: number;
+  offset: number;
+  total: number;
 }
 
-export interface INewsApiResponse {
-  posts: INewsItem[];
+export interface NewsApiResponse {
+  posts: NewsItem[];
   total: number;
   skip: number;
   limit: number;
@@ -28,5 +30,5 @@ export interface INewsApiResponse {
 
 export interface FetchNewsParams {
   limit?: number;
-  skip?: number;
+  offset?: number;
 }

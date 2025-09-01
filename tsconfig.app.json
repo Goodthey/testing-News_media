@@ -21,7 +21,18 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Absolute imports */
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@components/*": ["components/*"],
+      "@entities/*": ["entities/*"],
+      "@features/*": ["features/*"],
+      "@shared/*": ["shared/*"],
+      "@app/*": ["app/*"]
+    }
   },
   "include": ["src"]
 }

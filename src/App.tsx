@@ -1,8 +1,9 @@
-import { NewsList } from "./components/NewsList/NewsList";
+import { NewsList } from "./features/news-list/ui/NewsList";
+import styles from "./App.module.css";
 
 function App() {
   return (
-    <div style={{ background: "#121212", minHeight: "100vh" }}>
+    <div className={styles.app}>
       <NewsList />
     </div>
   );
